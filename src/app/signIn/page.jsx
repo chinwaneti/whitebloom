@@ -7,7 +7,7 @@ import { auth } from '../firebase';
 import Link from 'next/link';
 import W from "../components/images/W.png"
 import H from "../components/images/H.png"
-import B from "../components/images/W.png"
+import B from "../components/images/O.png"
 import M from "../components/images/M.png"
 import Image from 'next/image';
 
@@ -36,24 +36,11 @@ function Page() {
   };
 
 
-  // const handleSignIn = async (e) => {
-  //   e.preventDefault();
-  //   setErrorMessage('');
-
-
-  //   try {
-  //     await signInWithEmailAndPassword(auth, email, password);
-  //     router.push('/main');
-  //   } catch (error) {
-  //     setErrorMessage(error.message);
-  //   }
-  // };
-
 
   return (
     <div className='relative h-screen'>
           
-    <div className="fixed  top-0 left-0 w-full h-full flex  items-center justify-center bg-[#082c64] transition-opacity duration-300 ease-in-out">
+    <div className="fixed md:p-0 p-10 top-0 left-0 w-full h-full flex  items-center justify-center bg-[#082c64] transition-opacity duration-300 ease-in-out">
 
     <div className='fixed top-16 flex text-white font-extrabold text-4xl'>
         <motion.div
@@ -76,10 +63,10 @@ function Page() {
 
       </div>
       <div>
-        <Image src={W} alt='o'  priority className='md:w-52 w-32 md:h-52 h-32 absolute -left-24 top-3'></Image>
-        <Image src={H} alt='o' priority className='md:w-52 w-32 md:h-52 h-32 absolute -right-20 -top-20'></Image>
-        <Image src={B} alt='o' priority className='md:w-52 w-32 md:h-52 h-32 absolute -left-20 -bottom-20'></Image>
-        <Image src={M} alt='o' priority className='md:w-52 w-32 md:h-52 h-32 absolute right-0 bottom-3'></Image>
+        <Image src={W} alt='o'  priority className='md:w-52 w-44 md:h-52 h-44 absolute -left-24 top-5'></Image>
+        <Image src={H} alt='o' priority className='md:w-52 w-44 md:h-52 h-32 absolute -right-20 -top-10'></Image>
+        <Image src={B} alt='o' priority className='md:w-52 w-44 md:h-52 h-32 absolute -left-20 -bottom-10'></Image>
+        <Image src={M} alt='o' priority className='md:w-52 w-44 md:h-52 h-32 absolute right-0 bottom-2'></Image>
       </div>
      
 

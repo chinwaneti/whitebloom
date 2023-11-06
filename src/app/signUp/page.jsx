@@ -47,7 +47,7 @@ function SignUp() {
   
 
   return (
-    <div className="bg-[#082c64] overflow-hidden min-h-screen flex items-center justify-center relative">
+    <div className="bg-[#082c64] md:p-0 p-5 overflow-hidden min-h-screen flex items-center justify-center relative">
         <div className='absolute top-28 bg-indigo-500 rounded-t-3xl w-full max-w-sm text-center  '>
             {sucessMessage && (
                 <span className='  text-white'>{sucessMessage} <span><Image src="https://cdn-icons-png.flaticon.com/128/10629/10629607.png?ga=GA1.1.1685298518.1695204527&track=ais" width={100} height={100} alt="pix" className='h-10 w-10 mx-auto'/></span>  <div className='text-center  '> <Link href='/signIn' className=' underline'>Sign in</Link> </div></span>
@@ -73,10 +73,10 @@ function SignUp() {
         </motion.div>
 
       </div>
-      <div className='absolute -left-24 top-3'><Image src={W} alt="o" priority className='md:w-52 w-32 md:h-52 h-32'/></div>
-      <div className='absolute -right-20 -top-20'><Image src={H} alt="m" priority className='md:w-52 w-32 md:h-52 h-32'/></div>
-      <div className='absolute -left-20 -bottom-20'><Image src={B}alt="h" priority className='md:w-52 w-32 md:h-52 h-32'/></div>
-      <div className='absolute right-0 bottom-3'><Image src={M} alt="o" priority className='md:w-52 w-32 md:h-52 h-32'/></div>
+      <Image src={W} alt='o'  priority className='md:w-52 w-44 md:h-52 h-44 absolute -left-24 top-5'></Image>
+        <Image src={H} alt='o' priority className='md:w-52 w-44 md:h-52 h-32 absolute -right-20 -top-10'></Image>
+        <Image src={B} alt='o' priority className='md:w-52 w-44 md:h-52 h-32 absolute -left-20 -bottom-10'></Image>
+        <Image src={M} alt='o' priority className='md:w-52 w-44 md:h-52 h-32 absolute right-0 bottom-2'></Image>
 
 
       <div className="bg-white z-50 w-full max-w-sm mx-4 mt-28 rounded-br-3xl  shadow-lg p-8">
