@@ -28,7 +28,7 @@ function Page() {
       })
       .catch((error) => {
         if (error.code === 'auth/wrong-password' || error.code === 'auth/user-not-found') {
-          setErrorMessage('you do not have an account.');
+          setErrorMessage('An error occurred while signing in..');
         } else {
           setErrorMessage('Email or password is incorrect.');
         }
@@ -119,7 +119,7 @@ function Page() {
           {errorMessage && <p className="text-red-600">{errorMessage}</p>}
         </div>
         <button
-          className="bg-[#236fdb] text-white w-full py-2 rounded-lg hover:bg-[#082c64] transition duration-300 ease-in-out"
+          className="bg-[#236fdb] text-white w-full py-2 rounded-lg hover:bg-[#082c64] active:scale-95 transition duration-300 ease-in-out"
           onClick={handleSignIn}
         >
           Sign In

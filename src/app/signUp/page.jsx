@@ -29,7 +29,19 @@ function SignUp() {
         await createUserWithEmailAndPassword(auth, email, password);
         setSucessMessage("Congratulations! you are now registered.")
       } catch (error) {
-        setError(error.message);
+        switch (error.code) {
+          case "auth/invalid-email":
+            setErrorMessage("Invalid email address. Please provide a valid email.");
+            break;
+          case "auth/weak-password":
+            setErrorMessage("Weak password. Your password should be at least 6 characters.");
+            break;
+          case "auth/email-already-in-use":
+            setErrorMessage("This email is already registered. Please sign in or use another email.");
+            break;
+          default:
+            setErrorMessage("An error occurred while signing up. Please try again later.");
+        }
       }
     };
   
@@ -98,14 +110,14 @@ function SignUp() {
       
         {errorMessage && <div className="text-red-500">{errorMessage}</div>}
         <button
-          className="bg-[#236fdb] text-white w-full py-2 rounded-lg active:bg-blue-950 hover:bg-[#082c64] transition duration-300 ease-in-out"
+          className="bg-[#236fdb] text-white w-full py-2 rounded-lg active:scale-95 hover:bg-[#082c64] transition duration-300 ease-in-out"
           onClick={handleSignUp}
         >
           Sign Up
         </button>
       </div>
       <Link href="/signIn">
-        <div className="absolute top-2 right-2 bg-[#236fdb] hover:bg-[#082c64]  active:bg-blue-950 p-2 rounded-full">
+        <div className="absolute top-2 right-2 bg-[#236fdb] hover:bg-[#082c64]  active:scale-95 p-2 rounded-full">
           <AiOutlineClose />
         </div>
       </Link>
