@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import Footer1 from '../components/Footer1';
 // import Footer1 from './Footer1';
+import Image from 'next/image';
 
 
 export default function Welcome() {
@@ -27,7 +28,7 @@ export default function Welcome() {
           transition={{ duration: 1 }}
         >
           <span className='flex items-center space-x-2'>
-            <img src="https://cdn-icons-png.flaticon.com/128/7059/7059470.png?ga=GA1.1.1685298518.1695204527&track=ais" alt="" className='w-10 h-10' />
+            <Image src="https://cdn-icons-png.flaticon.com/128/7059/7059470.png?ga=GA1.1.1685298518.1695204527&track=ais" alt="pix" width={100} height={100}  className='w-10 h-10' />
             <span>With</span>
           </span>
         </motion.div>

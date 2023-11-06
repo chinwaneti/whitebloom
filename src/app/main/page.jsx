@@ -57,12 +57,12 @@ export default function Main() {
           <Image
             src="https://cdn-icons-png.flaticon.com/128/2592/2592317.png?ga=GA1.1.1685298518.1695204527&track=ais"
             alt="pix"
-            width={20}
-            height={20}
-            className="w-20 h-40 md:ml-32"
+            width={100}
+            height={50}
+            className="w-20 h-40 md:h-20 md:mt-6  md:ml-32"
           />
           <div className="md:ml-10 ml-2">
-            <p className="font-bold text-xl text-blue-800">Your Security is our Priority</p>
+            <p className="font-bold text-xl my-2 text-blue-800">Your Security is our Priority</p>
             <p className="md:w-[650px]">
               WithBloom uses the highest levels of Internet Security and is secured by 256 bits SSL security encryption to ensure that your information is completely protected from fraud.
             </p>
@@ -70,7 +70,7 @@ export default function Main() {
         </div>
         <p className='text-blue-800 font-bold md:ml-[30%] ml-[15%] md:text-4xl text-2xl md:absolute md:top-[122%] py-14 '>Your safe space for investing</p>
       </div>
-      <div className='md:mt-[33%] mt-[90%]'><Style /></div>
+      <div className='md:mt-[35%] mt-[90%]'><Style /></div>
       
       <div className='absolute md:top-[280%]  md:ml-16 ml-6 md:px-0 px-5 md:py-10  w-[90%] md:h-[90%] rounded-3xl bg-gray-100 md:mt-0 mt-28'>
         <div className='flex w-[80%] mx-auto'>
@@ -83,7 +83,7 @@ export default function Main() {
               <Image src={pic} alt="pic" width={150} height={150} className='w-96 h-96 hidden sm:block' />
             </p>
             <p>
-              <Image src='https://img.freepik.com/free-vector/illustration-barcode_53876-44019.jpg?size=626&ext=jpg&ga=GA1.1.1685298518.1695204527&semt=ais' alt='scan' width={170} height={170} className='rounded-3xl mb'/>
+              <Image src='https://img.freepik.com/free-vector/illustration-barcode_53876-44019.jpg?size=626&ext=jpg&ga=GA1.1.1685298518.1695204527&semt=ais' alt='scan' width={170} height={170} className='rounded-3xl mb-5'/>
             </p>
           </div>
         </div>

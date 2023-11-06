@@ -68,7 +68,7 @@ export default function Style() {
             {hoverStates[index] && (
               <motion.div
                 className={`absolute inset-0 flex justify-center hover:text-${textSize} items-center text-center text-white font-bold text-${textSize}`}
-                style={{ fontSize: "6px", marginTop: "30px", width: "100px", textAlign: "center", marginLeft: "70px" }}
+                style={{ fontSize: "10px", marginTop: "30px", width: "100px", textAlign: "center", marginLeft: "70px" }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 20 }}

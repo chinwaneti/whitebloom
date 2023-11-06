@@ -36,6 +36,19 @@ function Page() {
   };
 
 
+  // const handleSignIn = async (e) => {
+  //   e.preventDefault();
+  //   setErrorMessage('');
+
+
+  //   try {
+  //     await signInWithEmailAndPassword(auth, email, password);
+  //     router.push('/main');
+  //   } catch (error) {
+  //     setErrorMessage(error.message);
+  //   }
+  // };
+
 
   return (
     <div className='relative h-screen'>
@@ -49,7 +62,7 @@ function Page() {
           transition={{ duration: 1 }}
         >
           <span className='flex items-center space-x-2'>
-            <img src="https://cdn-icons-png.flaticon.com/128/7059/7059470.png?ga=GA1.1.1685298518.1695204527&track=ais" alt="" className='w-10 h-10' />
+            <Image src="https://cdn-icons-png.flaticon.com/128/7059/7059470.png?ga=GA1.1.1685298518.1695204527&track=ais" alt="pix" width={100} height={100} priority className='w-10 h-10' />
             <span>With</span>
           </span>
         </motion.div>
@@ -62,12 +75,11 @@ function Page() {
         </motion.div>
 
       </div>
-      {/* <div className=''><img src={W} alt="o" className='w-52 h-52'/></div> */}
       <div>
-        <Image src={W} alt='o' className='w-52 h-52 absolute -left-24 top-3'></Image>
-        <Image src={H} alt='o' className='w-52 h-52 absolute -right-20 -top-20'></Image>
-        <Image src={B} alt='o' className='w-52 h-52 absolute -left-20 -bottom-20'></Image>
-        <Image src={M} alt='o' className='w-52 h-52 absolute right-0 bottom-3'></Image>
+        <Image src={W} alt='o'  priority className='w-52 h-52 absolute -left-24 top-3'></Image>
+        <Image src={H} alt='o' priority className='w-52 h-52 absolute -right-20 -top-20'></Image>
+        <Image src={B} alt='o' priority className='w-52 h-52 absolute -left-20 -bottom-20'></Image>
+        <Image src={M} alt='o' priority className='w-52 h-52 absolute right-0 bottom-3'></Image>
       </div>
      
 
@@ -112,7 +124,7 @@ function Page() {
         >
           Sign In
         </button>
-        <Link href="/signup" className="block text-center text-indigo-600 text-sm font-medium mt-2 hover:underline">
+        <Link href="/signUp" className="block text-center text-indigo-600 text-sm font-medium mt-2 hover:underline">
           Sign up for an account
         </Link>
       </div>

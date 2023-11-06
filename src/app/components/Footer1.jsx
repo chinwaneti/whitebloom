@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 export default function Footer1() {
   return (
@@ -9,7 +10,7 @@ export default function Footer1() {
      animate={{ x: 0 }} 
      transition={{ duration: 1 }} 
     >
-  <span className='font-bold flex items-center text-[18px] justify-center'>discover new coins and their market rates <img src="https://cdn-icons-png.flaticon.com/128/2219/2219299.png?ga=GA1.1.1685298518.1695204527&track=ais" alt="plane" className='w-10 h-10' />
+  <span className='font-bold flex items-center text-[18px] justify-center'>discover new coins and their market rates <Image src="https://cdn-icons-png.flaticon.com/128/2219/2219299.png?ga=GA1.1.1685298518.1695204527&track=ais" alt="plane" width={100} height={100} className='w-10 h-10' />
   </span>  
   <span className='text-[14px] text-gray-300'> WB Capital Limited is a fintech company duly  lincensed by  the security and exchange Commision (SEC) of Nigeria. </span>
     </motion.div>

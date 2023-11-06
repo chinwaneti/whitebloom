@@ -1,29 +1,37 @@
-"use cient"
-import { createContext, useContext, useEffect, useState } from 'react';
-import { onAuthStateChanged } from 'firebase/auth';
-import { auth } from '../firebase';
+// "use client"
+// import { createContext, useContext, useEffect, useState } from 'react';
+// import { onAuthStateChanged } from 'firebase/auth';
+// import { auth } from '../firebase';
 
 
-const AuthContext = createContext();
+// const AuthContext = createContext();
 
-export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
+// export const AuthProvider = ({ children }) => {
+//   const [user, setUser] = useState(null);
 
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setUser(user);
-    });
+//   useEffect(() => {
+//     const unsubscribe = onAuthStateChanged(auth, (user) => {
+//       setUser(user);
+//     });
 
-    return () => {
-      unsubscribe();
-    };
-  }, []);
+//     return () => {
+//       unsubscribe();
+//     };
+//   }, []);
 
+//   return (
+//     <AuthContext.Provider value={{ user, setUser }}>
+//       {children}
+//     </AuthContext.Provider>
+//   );
+// };
+
+// export const useAuth = () => useContext(AuthContext);
+
+import React from 'react'
+
+export default function page() {
   return (
-    <AuthContext.Provider value={{ user, setUser }}>
-      {children}
-    </AuthContext.Provider>
-  );
-};
-
-export const useAuth = () => useContext(AuthContext);
+    <div>page</div>
+  )
+}

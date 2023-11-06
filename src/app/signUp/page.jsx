@@ -5,44 +5,40 @@ import { AiOutlineClose } from 'react-icons/ai';
 import Image from 'next/image';
 import Link from 'next/link';
 import { auth } from '../firebase';
-import { useAuth } from '../context.jsx/page';
 import { motion } from 'framer-motion';
-import W from "./images/W.png"
-import H from "./images/H.png"
-import B from "./images/O.png"
-import M from "./images/M.png"
+import W from "../components/images/W.png"
+import H from "../components/images/H.png"
+import B from "../components/images/O.png"
+import M from "../components/images/M.png"
 
 function SignUp() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [sucessMessage, setSucessMessage] = useState('');
-  const { setUser } = useAuth();
-  
-  const handleSignUp = (e) => {
-    e.preventDefault();
-    setErrorMessage('')
-    createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-        const user = userCredential.user;
-        
+    
+    
+    
+    
+    const handleSignUp = async (e) => {
+      e.preventDefault();
+    setErrorMessage('');
+
+      
+      try {
+        await createUserWithEmailAndPassword(auth, email, password);
         setSucessMessage("Congratulations! you are now registered.")
-        setUser(user);
-
-      })
-      .catch((error) => {
-        const errorMessage = error.message;
-        setErrorMessage(errorMessage);
-      });
-  };
-
+      } catch (error) {
+        setError(error.message);
+      }
+    };
   
 
   return (
     <div className="bg-[#082c64] overflow-hidden min-h-screen flex items-center justify-center relative">
         <div className='absolute top-28 bg-indigo-500 rounded-t-3xl w-full max-w-sm text-center  '>
             {sucessMessage && (
-                <span className='  text-white'>{sucessMessage} <span><Image src="https://cdn-icons-png.flaticon.com/128/10629/10629607.png?ga=GA1.1.1685298518.1695204527&track=ais" alt="pix" className='h-10 w-10 mx-auto'/></span>  <div className='text-center  '> <Link href='/SignIn' className=' underline'>Sign in</Link> </div></span>
+                <span className='  text-white'>{sucessMessage} <span><Image src="https://cdn-icons-png.flaticon.com/128/10629/10629607.png?ga=GA1.1.1685298518.1695204527&track=ais" width={100} height={100} alt="pix" className='h-10 w-10 mx-auto'/></span>  <div className='text-center  '> <Link href='/signIn' className=' underline'>Sign in</Link> </div></span>
             )}
         </div>
         <div className='fixed top-16 flex text-white font-extrabold text-4xl'>
@@ -52,7 +48,7 @@ function SignUp() {
           transition={{ duration: 1 }}
         >
           <span className='flex items-center space-x-2'>
-            <Image src="https://cdn-icons-png.flaticon.com/128/7059/7059470.png?ga=GA1.1.1685298518.1695204527&track=ais" alt="" className='w-10 h-10' />
+            <Image src="https://cdn-icons-png.flaticon.com/128/7059/7059470.png?ga=GA1.1.1685298518.1695204527&track=ais" alt="pix" width={100} height={100} priority className='w-10 h-10'/>  
             <span>With</span>
           </span>
         </motion.div>
@@ -65,13 +61,13 @@ function SignUp() {
         </motion.div>
 
       </div>
-      <div className='absolute -left-24 top-3'><Image src={W} alt="o" className='w-52 h-52'/></div>
-      <div className='absolute -right-20 -top-20'><Image src={H} alt="m" className='w-52 h-52'/></div>
-      <div className='absolute -left-20 -bottom-20'><Image src={B}alt="h" className='w-52 h-52'/></div>
-      <div className='absolute right-0 bottom-3'><Image src={M} alt="o" className='w-52 h-52'/></div>
+      <div className='absolute -left-24 top-3'><Image src={W} alt="o" priority className='w-52 h-52'/></div>
+      <div className='absolute -right-20 -top-20'><Image src={H} alt="m" priority className='w-52 h-52'/></div>
+      <div className='absolute -left-20 -bottom-20'><Image src={B}alt="h" priority className='w-52 h-52'/></div>
+      <div className='absolute right-0 bottom-3'><Image src={M} alt="o" priority className='w-52 h-52'/></div>
 
 
-      <div className="bg-white w-full max-w-sm mx-4 mt-20 rounded-br-3xl  shadow-lg p-8">
+      <div className="bg-white z-50 w-full max-w-sm mx-4 mt-28 rounded-br-3xl  shadow-lg p-8">
         <h2 className="text-2xl font-semibold mb-4">Sign Up</h2>
         <div className="mb-4">
           <label htmlFor="email" className="block text-sm font-medium text-gray-700">
@@ -108,7 +104,7 @@ function SignUp() {
           Sign Up
         </button>
       </div>
-      <Link href="/SignIn">
+      <Link href="/signIn">
         <div className="absolute top-2 right-2 bg-[#236fdb] hover:bg-[#082c64]  active:bg-blue-950 p-2 rounded-full">
           <AiOutlineClose />
         </div>
