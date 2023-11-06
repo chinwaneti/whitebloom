@@ -28,9 +28,9 @@ function Page() {
       })
       .catch((error) => {
         if (error.code === 'auth/wrong-password' || error.code === 'auth/user-not-found') {
-          setErrorMessage('Email or password is incorrect.');
+          setErrorMessage('you do not have an account.');
         } else {
-          setErrorMessage('An error occurred while signing in.');
+          setErrorMessage('Email or password is incorrect.');
         }
       });
   };
