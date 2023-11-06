@@ -2,3 +2,31 @@
 const nextConfig = {}
 
 module.exports = nextConfig
+
+module.exports = {
+    images: {
+        remotePatterns: [{
+                protocol: 'https',
+                hostname: 'cdn-icons-png.flaticon.com',
+                port: '',
+                pathname: '/**',
+            },
+          
+
+        
+        {
+                protocol: 'https',
+                hostname: 'img.freepik.com',
+                port: '',
+                pathname: '/**',
+            },
+        {
+                protocol: 'https',
+                hostname: "assets.coingecko.com",
+                port: '',
+                pathname: '/**',
+            },
+          
+
+        ]
+        }}
