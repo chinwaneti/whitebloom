@@ -17,7 +17,7 @@ export default function Main() {
       <div>
         <Header />
       </div>
-      <div className='font-extrabold  md:text-[50px] text-[30px]  text-blue-800  ml-[5%] md:px-0 px-5 md:mt-[13%] mt-[30%]'>
+      <div className='font-extrabold  md:text-[50px] text-[30px]  text-blue-800  ml-[5%] md:px-0 px-5 md:mt-[13%] mt-[40%]'>
   <div
   className='text-black'
   >
@@ -52,7 +52,7 @@ export default function Main() {
   Approximate Exchange Rate: 1 ETH = $2,500 USD
 </div>
 
-      <div className="absolute md:top-[74%] top-[100%] md:w-full w-[100%]">
+      <div className="absolute md:top-[74%] top-[90%] md:w-full w-[100%]">
         <div className="flex bg-gray-100 p-10 ">
           <Image
             src="https://cdn-icons-png.flaticon.com/128/2592/2592317.png?ga=GA1.1.1685298518.1695204527&track=ais"
@@ -70,7 +70,7 @@ export default function Main() {
         </div>
         <p className='text-blue-800 font-bold md:ml-[30%] ml-[15%] md:text-4xl text-2xl md:absolute md:top-[122%] py-14 '>Your safe space for investing</p>
       </div>
-      <div className='md:mt-[35%] mt-[90%]'><Style /></div>
+      <div className='md:mt-[35%] mt-[100%]'><Style /></div>
       
       <div className='absolute md:top-[280%]  md:ml-16 ml-6 md:px-0 px-5 md:py-10  w-[90%] md:h-[90%] rounded-3xl bg-gray-100 md:mt-0 mt-28'>
         <div className='flex w-[80%] mx-auto'>

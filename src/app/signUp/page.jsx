@@ -73,10 +73,10 @@ function SignUp() {
         </motion.div>
 
       </div>
-      <div className='absolute -left-24 top-3'><Image src={W} alt="o" priority className='w-52 h-52'/></div>
-      <div className='absolute -right-20 -top-20'><Image src={H} alt="m" priority className='w-52 h-52'/></div>
-      <div className='absolute -left-20 -bottom-20'><Image src={B}alt="h" priority className='w-52 h-52'/></div>
-      <div className='absolute right-0 bottom-3'><Image src={M} alt="o" priority className='w-52 h-52'/></div>
+      <div className='absolute -left-24 top-3'><Image src={W} alt="o" priority className='md:w-52 w-32 md:h-52 h-32'/></div>
+      <div className='absolute -right-20 -top-20'><Image src={H} alt="m" priority className='md:w-52 w-32 md:h-52 h-32'/></div>
+      <div className='absolute -left-20 -bottom-20'><Image src={B}alt="h" priority className='md:w-52 w-32 md:h-52 h-32'/></div>
+      <div className='absolute right-0 bottom-3'><Image src={M} alt="o" priority className='md:w-52 w-32 md:h-52 h-32'/></div>
 
 
       <div className="bg-white z-50 w-full max-w-sm mx-4 mt-28 rounded-br-3xl  shadow-lg p-8">

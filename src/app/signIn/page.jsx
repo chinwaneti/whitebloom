@@ -76,10 +76,10 @@ function Page() {
 
       </div>
       <div>
-        <Image src={W} alt='o'  priority className='w-52 h-52 absolute -left-24 top-3'></Image>
-        <Image src={H} alt='o' priority className='w-52 h-52 absolute -right-20 -top-20'></Image>
-        <Image src={B} alt='o' priority className='w-52 h-52 absolute -left-20 -bottom-20'></Image>
-        <Image src={M} alt='o' priority className='w-52 h-52 absolute right-0 bottom-3'></Image>
+        <Image src={W} alt='o'  priority className='md:w-52 w-32 md:h-52 h-32 absolute -left-24 top-3'></Image>
+        <Image src={H} alt='o' priority className='md:w-52 w-32 md:h-52 h-32 absolute -right-20 -top-20'></Image>
+        <Image src={B} alt='o' priority className='md:w-52 w-32 md:h-52 h-32 absolute -left-20 -bottom-20'></Image>
+        <Image src={M} alt='o' priority className='md:w-52 w-32 md:h-52 h-32 absolute right-0 bottom-3'></Image>
       </div>
      
 
